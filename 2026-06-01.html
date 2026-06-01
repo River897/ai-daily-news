@@ -164,9 +164,23 @@ html{scroll-behavior:smooth}
 /* ── 导航图标 ── */
 .nav-icon{font-size:15px;line-height:1}
 
+/* ── 节日装饰 ── */
+.holiday-left,.holiday-right{position:absolute;pointer-events:none;z-index:5;user-select:none}
+.holiday-left{left:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.holiday-right{right:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
+.holiday-icon{font-size:clamp(38px,7vw,64px);animation:holidayFloat 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(124,111,247,.3))}
+.holiday-name{font-size:13px;font-weight:700;color:#fff;background:linear-gradient(135deg,rgba(124,111,247,.3),rgba(0,206,201,.25));padding:5px 16px;border-radius:16px;white-space:nowrap;border:1px solid rgba(124,111,247,.3);backdrop-filter:blur(4px)}
+.holiday-art{font-size:clamp(30px,5vw,48px);animation:holidayFloat 3s ease-in-out infinite;animation-delay:1.5s;line-height:1.2;text-align:center}
+@keyframes holidayFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:768px){
+  .holiday-left{left:8px}.holiday-right{display:none}
+  .holiday-icon{font-size:32px}.holiday-name{font-size:11px;padding:3px 10px}
+}
+
 </style></head>
 <body>
 <header class="hero">
+<div class="holiday-left"><span class="holiday-icon">🎠</span><span class="holiday-name">儿童节快乐</span></div><div class="holiday-right"><span class="holiday-art">🎈🎪🧒</span></div>
 <h1>AI 每日快报</h1>
 <p class="date">2026年06月01日 星期一</p>
 <p class="range">统计时段：05/31 12:00 → 06/01 12:00</p>
@@ -201,12 +215,12 @@ html{scroll-behavior:smooth}
 <article class="card card-animate" style="animation-delay:0.05s">
 <div class="card-img" style="background:linear-gradient(135deg, #667eea, #764ba2)"><span class="card-icon">🧠</span></div>
 <div class="card-body">
-<span class="card-source">HackerNews</span>
-<h3><a href="https://www.theregister.com/ai-ml/2026/06/01/llms-are-closer-to-religion-than-they-appear-watch-out-for-those-who-like-it-that-way/5248189" target="_blank" rel="noopener">法学硕士比表面上看起来更接近宗教</a></h3>
-<p class="card-desc">文章网址：https://www.theregister.com/ai-ml/2026/06/01/llms-are-closer-to-religion-than-they-appear-watch-out-for-those-who-like-it-that-way/524818</p>
-<time>06-01 11:03</time>
+<span class="card-source">MIT科技评论</span>
+<h3><a href="https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/" target="_blank" rel="noopener">中国已批准世界上第一个侵入式脑机芯片——下一步是什么</a></h3>
+<p class="card-desc">去年十月的一天，董辉坐在中国河南省自家的院子里，决定看看自己是否能拿笔写字。  董,</p>
+<time>06-01 09:09</time>
 </div>
-<button class="copy-link-btn" data-url="https://www.theregister.com/ai-ml/2026/06/01/llms-are-closer-to-religion-than-they-appear-watch-out-for-those-who-like-it-that-way/5248189" title="复制链接" aria-label="复制链接">🔗</button>
+<button class="copy-link-btn" data-url="https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/" title="复制链接" aria-label="复制链接">🔗</button>
 </article></div></section><section class="category " id="section-app">
 <h2 class="cat-title">🚀 产业应用与产品<span class="count">2条</span></h2>
 <div class="cards"><article class="card card-animate" style="animation-delay:0.10s">
@@ -234,21 +248,21 @@ html{scroll-behavior:smooth}
 <div class="card-img" style="background:linear-gradient(135deg, #f7971e, #ffd200)"><span class="card-icon">📈</span></div>
 <div class="card-body">
 <span class="card-source">Bing</span>
-<h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d7d5107e34acbadca6322fb0b83a7&url=https%3a%2f%2finvezz.com%2fnews%2f2026%2f06%2f01%2fnow-ibm-software-stocks-surge-as-huang-eases-ai-fears-analysts-see-more-upside%2f&c=16794070067816944647&mkt=en-sg" target="_blank" rel="noopener">现在，随着黄仁勋缓解人工智能担忧，IBM 和其他软件股票飙升</a></h3>
-<p class="card-desc">Nvidia 对“代理人工智能杀死软件”的抵制是工作流程/编排平台的直接推动力。现在是最干净的“控制塔”玩法：</p>
-<time>06-01 05:05</time>
+<h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d94315fc843e6b51a982b60ed79e1&url=https%3a%2f%2feconomictimes.indiatimes.com%2fmarkets%2fus-stocks%2fnews%2fus-stock-market-live-dow-jones-sp-500-nasdaq-iran-war-brent-oil-price-nvidia-microsoft-micron-broadcom-dell-cadence-qualcomm-intel-amd-apple-ai-chip-tech-stocks%2fliveblog%2f131442699.cms&c=10442393553513530118&mkt=en-sg" target="_blank" rel="noopener">今日美国股市|道琼斯 |纳斯达克直播：人工智能乐观情绪抵消美伊战争担忧，美股开盘接近历史高位</a></h3>
+<p class="card-desc">随着英伟达和微软因新的人工智能发展而上涨，抵消了对美伊紧张局势的担忧，美国股指期货上涨。美光突破 1.0 美元</p>
+<time>06-01 07:04</time>
 </div>
-<button class="copy-link-btn" data-url="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d7d5107e34acbadca6322fb0b83a7&url=https%3a%2f%2finvezz.com%2fnews%2f2026%2f06%2f01%2fnow-ibm-software-stocks-surge-as-huang-eases-ai-fears-analysts-see-more-upside%2f&c=16794070067816944647&mkt=en-sg" title="复制链接" aria-label="复制链接">🔗</button>
+<button class="copy-link-btn" data-url="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d94315fc843e6b51a982b60ed79e1&url=https%3a%2f%2feconomictimes.indiatimes.com%2fmarkets%2fus-stocks%2fnews%2fus-stock-market-live-dow-jones-sp-500-nasdaq-iran-war-brent-oil-price-nvidia-microsoft-micron-broadcom-dell-cadence-qualcomm-intel-amd-apple-ai-chip-tech-stocks%2fliveblog%2f131442699.cms&c=10442393553513530118&mkt=en-sg" title="复制链接" aria-label="复制链接">🔗</button>
 </article>
 <article class="card card-animate" style="animation-delay:0.25s">
 <div class="card-img" style="background:linear-gradient(135deg, #f7971e, #ffd200)"><span class="card-icon">📈</span></div>
 <div class="card-body">
 <span class="card-source">Bing</span>
-<h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d7d51300042eaa2ff9145c1686dc5&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2fmarkets%2fai-bubble-debate-gets-real-as-chip-stocks-rally%2far-AA24vVVc&c=15372935190146460136&mkt=en-sg" target="_blank" rel="noopener">随着芯片股上涨，人工智能泡沫辩论变得真实</a></h3>
-<p class="card-desc">芯片制造商的股价飙升，引发了关于人工智能泡沫的争论。对人工智能数据中心芯片的需求正在推动价格显着上涨</p>
-<time>05-31 23:36</time>
+<h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d94315d6446c196ff9f0c76b08754&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fintuit-intu-announces-analytics-ai-134828140.html&c=9593202053079932168&mkt=en-sg" target="_blank" rel="noopener">Intuit (INTU) 宣布推出 Analytics AI，这是 Mailchimp 中的对话式分析代理</a></h3>
+<p class="card-desc">凭借对冲基金的巨大兴趣，Intuit Inc.（纳斯达克股票代码：INTU）在我们根据对冲基金评选的 10 只最佳 SaaS 股票名单中占有一席之地。</p>
+<time>06-01 06:57</time>
 </div>
-<button class="copy-link-btn" data-url="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d7d51300042eaa2ff9145c1686dc5&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2fmarkets%2fai-bubble-debate-gets-real-as-chip-stocks-rally%2far-AA24vVVc&c=15372935190146460136&mkt=en-sg" title="复制链接" aria-label="复制链接">🔗</button>
+<button class="copy-link-btn" data-url="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1d94315d6446c196ff9f0c76b08754&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fintuit-intu-announces-analytics-ai-134828140.html&c=9593202053079932168&mkt=en-sg" title="复制链接" aria-label="复制链接">🔗</button>
 </article></div></section></main>
 
 <section class="summary-section" id="section-summary">
@@ -307,7 +321,7 @@ html{scroll-behavior:smooth}
 </nav>
 
 <footer class="footer">
-<p>AI 每日快报 · 自动生成于 2026-06-01 20:38 (北京时间)</p>
+<p>AI 每日快报 · 自动生成于 2026-06-01 22:16 (北京时间)</p>
 <p>数据源：TechCrunch · HackerNews · MIT科技评论 · 36氪 · Bing News</p>
 <p style="margin-top:2px"><a href="https://river897.top" style="color:var(--accent);text-decoration:none">https://river897.top</a></p>
 <p style="margin-top:6px;opacity:.6">⚠ 投资分析仅供参考，不构成投资建议</p>
