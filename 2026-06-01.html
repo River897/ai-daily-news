@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI 日报 | 2026年06月01日</title>
+<style>
+:root{--bg:#0b0b12;--card-bg:#151524;--border:#282840;--text:#e2e2f0;--text2:#9898b8;--accent:#7c6ff7;--gold:#ffd200;--r:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+
+.hero{background:linear-gradient(135deg,#0b0b1e,#1a1040,#0d1b2a,#0b0b12);border-bottom:1px solid var(--border);padding:52px 24px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(124,111,247,.10) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(0,212,204,.07) 0%,transparent 50%);pointer-events:none}
+.hero h1{font-size:clamp(30px,5vw,50px);font-weight:800;background:linear-gradient(135deg,#b8acff,#7c6ff7,#00d4cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
+.hero .date{font-size:18px;color:var(--text2);position:relative}
+.hero .range{font-size:12px;color:var(--text2);opacity:.6;margin-top:4px;position:relative}
+
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:18px 24px;background:var(--card-bg);border-bottom:1px solid var(--border)}
+.stat-num{font-size:26px;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:11px;color:var(--text2);letter-spacing:.1em}
+
+.container{max-width:900px;margin:0 auto;padding:32px 24px 60px}
+.category{margin-bottom:44px}
+.cat-title{font-size:20px;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:baseline;gap:8px}
+.count{font-size:11px;color:var(--text2);font-weight:400;background:var(--card-bg);padding:2px 10px;border-radius:20px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
+
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.5);border-color:var(--accent)}
+.card-img{height:120px;display:flex;align-items:center;justify-content:center}
+.card-icon{font-size:40px}
+.card-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.card-source{font-size:10px;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.card-body h3{font-size:15px;font-weight:700;line-height:1.5;margin-bottom:6px;flex:1}
+.card-body h3 a{color:var(--text);text-decoration:none;transition:color .2s}
+.card-body h3 a:hover{color:#00d4cc}
+.card-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-body time{font-size:10px;color:var(--text2);opacity:.5;margin-top:auto}
+
+.invest-section .card-img{height:100px}
+.invest-section .cat-title{color:var(--gold)}
+.invest-section .card:hover{border-color:var(--gold)}
+.invest-section .card-source{color:var(--gold)}
+
+/* ── 搞钱总结区 ── */
+.summary-section{background:linear-gradient(135deg,#0f1923,#0d1b1a,#0f1923);border-top:2px solid #00b894;border-bottom:2px solid #00b894;margin-top:40px;padding:48px 24px}
+.summary-inner{max-width:900px;margin:0 auto}
+.summary-inner h2{font-size:26px;font-weight:800;color:#00cec9;text-align:center;margin-bottom:4px}
+.summary-inner .summary-sub{text-align:center;color:var(--text2);font-size:13px;margin-bottom:36px}
+.summary-block{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin-bottom:20px}
+.summary-block h3{font-size:17px;font-weight:700;margin-bottom:14px;color:#00cec9}
+.opp-list,.gig-list,.learn-list,.platform-list{list-style:none;padding:0}
+.opp-list li,.gig-list li,.learn-list li,.platform-list li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;line-height:1.7}
+.opp-list li:last-child,.gig-list li:last-child,.learn-list li:last-child,.platform-list li:last-child{border-bottom:none}
+.opp-list a{color:#00cec9;text-decoration:none;font-weight:600}
+.opp-list a:hover{text-decoration:underline}
+.opp-src{font-size:10px;color:var(--text2);opacity:.6;margin-left:6px}
+.no-data{color:var(--text2);font-size:13px;font-style:italic}
+.gig-list strong,.learn-list strong{color:#ffd200}
+.platform-list a{color:var(--accent);text-decoration:none;font-weight:600}
+.platform-list a:hover{text-decoration:underline}
+
+.footer{text-align:center;padding:32px;color:var(--text2);font-size:11px;border-top:1px solid var(--border);line-height:1.8}
+
+@media(max-width:768px){.cards{grid-template-columns:1fr}.hero{padding:36px 16px 28px}.stats{gap:24px}}
+</style></head>
+<body>
+<header class="hero">
+<h1>AI 每日快报</h1>
+<p class="date">2026年06月01日 星期一</p>
+<p class="range">统计时段：05/31 12:00 → 06/01 12:00</p>
+</header>
+<div class="stats">
+<div><div class="stat-num">4</div><div class="stat-lbl">精选新闻</div></div>
+<div><div class="stat-num">2</div><div class="stat-lbl">关注领域</div></div>
+<div><div class="stat-num">06/01</div><div class="stat-lbl">日期</div></div>
+</div>
+<main class="container"><section class="category ">
+<h2 class="cat-title">🧠 大模型与基础研究<span class="count">2条</span></h2>
+<div class="cards"><article class="card">
+<div class="card-img" style="background:linear-gradient(135deg, #667eea, #764ba2)"><span class="card-icon">🧠</span></div>
+<div class="card-body">
+<span class="card-source">36氪</span>
+<h3><a href="https://36kr.com/p/3824416083825027?f=rss" target="_blank" rel="noopener">获国家队采购、联名比音勒芬，「PLAYTOP」想用东方美学演绎户外功能服饰｜早期项目</a></h3>
+<p class="card-desc">当户外运动品牌纷纷在“防晒”“速干”“保暖”等参数上展开竞赛时，一家成立仅三年的新锐品牌，开始在功能的基础上，将“东方美学”元素融入一件功能衣中。 成立于2022年的「PLAYTOP」，是一家将东方美学与天然功能材料融合的户外品牌，瞄准25-40岁追求颜值与舒适体验的高智菁英人群。2025年雪季，P</p>
+<time>06-01 03:19</time>
+</div></article>
+<article class="card">
+<div class="card-img" style="background:linear-gradient(135deg, #667eea, #764ba2)"><span class="card-icon">🧠</span></div>
+<div class="card-body">
+<span class="card-source">HackerNews</span>
+<h3><a href="https://www.practicalengineering.management/p/shift-from-a-leader-follower-to-a" target="_blank" rel="noopener">Shift from a Leader-Follower to a Leader-Leader Approach</a></h3>
+<p class="card-desc">Article URL: https://www.practicalengineering.management/p/shift-from-a-leader-follower-to-a Comments URL: https://news.ycombinator.com/item?id=483518</p>
+<time>06-01 02:03</time>
+</div></article></div></section><section class="category ">
+<h2 class="cat-title">🚀 产业应用与产品<span class="count">2条</span></h2>
+<div class="cards"><article class="card">
+<div class="card-img" style="background:linear-gradient(135deg, #f093fb, #f5576c)"><span class="card-icon">🚀</span></div>
+<div class="card-body">
+<span class="card-source">TechCrunch</span>
+<h3><a href="https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/" target="_blank" rel="noopener">Erin Brockovich takes aim at data center secrecy</a></h3>
+<p class="card-desc">Environmental activist Erin Brockovich has a new mission.</p>
+<time>05-31 21:05</time>
+</div></article>
+<article class="card">
+<div class="card-img" style="background:linear-gradient(135deg, #f093fb, #f5576c)"><span class="card-icon">🚀</span></div>
+<div class="card-body">
+<span class="card-source">TechCrunch</span>
+<h3><a href="https://techcrunch.com/2026/05/31/this-weekends-two-biggest-movies-were-both-directed-by-youtubers/" target="_blank" rel="noopener">This weekend’s two biggest movies were both directed by YouTubers</a></h3>
+<p class="card-desc">The YouTube-to-prestige-horror pipeline is looking very strong.</p>
+<time>05-31 18:34</time>
+</div></article></div></section></main>
+
+<section class="summary-section">
+<div class="summary-inner">
+<h2>📋 搞钱机会 & 学习指南</h2>
+<p class="summary-sub">基于今日新闻 + 行业趋势的综合建议</p>
+<section class="summary-block">
+<h3>🔥 搞钱机会速递</h3>
+<p class="no-data">今日暂无抓取到新的兼职机会，可关注下方固定渠道。</p>
+</section>
+<section class="summary-block">
+<h3>💼 当前热门AI兼职方向</h3>
+<ul class="gig-list">
+<li><strong>AI 训练师 / 数据标注员</strong>：如 xAI、OpenAI、Scale AI、DataAnnotation 等平台常年招聘，时薪 $20–50，无需编程基础，会用AI工具即可。<strong>马斯克的 xAI 频繁招募各语种 AI Trainer</strong>，关注 xAI 官网 careers 页面。</li>
+<li><strong>Prompt 工程师 / AI 应用顾问</strong>：帮企业搭建 AI 工作流、写 Prompt 模板、做自动化流程，自由职业平台（Upwork / Fiverr）需求旺盛，单价 $50–500/单。</li>
+<li><strong>AI 内容创作者</strong>：用 AI 工具写文章、做视频、生成图片，接商单变现。门槛低、启动快，适合学生党。</li>
+<li><strong>AI 微调 / 模型部署自由职业</strong>：帮小企业微调开源模型（Llama、Qwen等）、部署 AI 服务，需要一定编程基础，客单价 ¥3,000–20,000。</li>
+<li><strong>AI 教育 / 培训讲师</strong>：在小红书/B站/抖音做 AI 科普、工具教学，积累粉丝后接广告或卖课。目前仍是蓝海。</li>
+</ul>
+</section>
+<section class="summary-block">
+<h3>🎯 值得投入的学习方向</h3>
+<ul class="learn-list">
+<li><strong>AI Agent 开发</strong>：2026 年 Agent 大爆发，学会用 LangChain / AutoGPT / CrewAI 搭 Agent 工作流，市场需求巨大。建议学 Python + Agent 框架 + API 调用。</li>
+<li><strong>开源模型微调与部署</strong>：Llama 4、Qwen 3 等开源模型越来越强，企业私有化部署需求激增。建议学 LoRA 微调、vLLM 推理、向量数据库。</li>
+<li><strong>AI + 垂直行业</strong>：AI+法律、AI+医疗、AI+金融……把 AI 能力和某个行业知识结合，是最难被替代的方向。建议深耕一个你感兴趣的行业。</li>
+<li><strong>AI 安全与对齐</strong>：随着 AI 能力增强，安全/对齐方向人才缺口巨大，薪资高、竞争小。适合喜欢研究型工作的同学。</li>
+<li><strong>多模态 AI 应用</strong>：视频生成（Sora/Kling）、语音克隆、数字人……多模态是 2026 最大风口。建议多动手做项目，积累作品集。</li>
+</ul>
+</section>
+<section class="summary-block">
+<h3>🔍 去哪里找机会</h3>
+<ul class="platform-list">
+<li><a href="https://upwork.com" target="_blank" rel="noopener">Upwork</a> — 全球最大自由职业平台，AI 相关项目很多</li>
+<li><a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> — 适合接小单，AI 头像/配音/Prompt 模板等</li>
+<li><a href="https://dataannotation.tech" target="_blank" rel="noopener">DataAnnotation</a> — 专注 AI 数据标注，时薪 $20+</li>
+<li><a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> — 远程工作聚合，常有 AI 相关岗位</li>
+<li><a href="https://zhipin.com" target="_blank" rel="noopener">BOSS直聘</a> — 搜「AI训练师」「AI标注」「远程」等关键词</li>
+<li><a href="https://zbj.com" target="_blank" rel="noopener">猪八戒网</a> — 国内自由职业平台，AI 相关需求增长快</li>
+<li><a href="https://xiaohongshu.com" target="_blank" rel="noopener">小红书/即刻</a> — 搜「AI兼职」「AI接单」，有很多经验分享</li>
+</ul>
+</section>
+</div>
+</section>
+
+<footer class="footer">
+<p>AI 每日快报 · 自动生成于 2026-06-01 12:03 (北京时间)</p>
+<p>数据源：TechCrunch · HackerNews · MIT科技评论 · 36氪 · Bing News</p>
+<p style="margin-top:2px"><a href="https://river897.top" style="color:var(--accent);text-decoration:none">https://river897.top</a></p>
+<p style="margin-top:6px;opacity:.6">⚠ 投资分析仅供参考，不构成投资建议</p>
+</footer>
+</body></html>
