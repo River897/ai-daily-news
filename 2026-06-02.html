@@ -4,14 +4,14 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>AI 日报 | 2026年06月02日</title>
 <style>
-:root{--bg:#0b0b12;--card-bg:#151524;--border:#282840;--text:#e2e2f0;--text2:#9898b8;--accent:#7c6ff7;--gold:#ffd200;--r:12px}
+:root{--bg:#ececf0;--bg-rgb:236,236,240;--card-bg:#ffffff;--border:#d4d4d8;--text:#1c1c1e;--text2:#6e6e73;--accent:#5c5c64;--gold:#c46e00;--r:12px}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(rgba(11,11,18,0.88),rgba(11,11,18,0.88)),url("bg-wallpaper.png") center/cover no-repeat fixed;color:var(--text);line-height:1.7}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(rgba(var(--bg-rgb),0.58),rgba(var(--bg-rgb),0.58)),url("bg-wallpaper.png") center/cover no-repeat fixed;color:var(--text);line-height:1.7}
 html{scroll-behavior:smooth}
 
-.hero{background:linear-gradient(135deg,#0b0b1e,#1a1040,#0d1b2a,#0b0b12);border-bottom:1px solid var(--border);padding:52px 24px 40px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(124,111,247,.10) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(0,212,204,.07) 0%,transparent 50%);pointer-events:none}
-.hero h1{font-size:clamp(30px,5vw,50px);font-weight:800;background:linear-gradient(135deg,#b8acff,#7c6ff7,#00d4cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
+.hero{background:linear-gradient(135deg,#d8d8de,#e4e4e9,#d0d0d6,#ececf0);border-bottom:1px solid var(--border);padding:52px 24px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(92,92,100,.06) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(92,92,100,.04) 0%,transparent 50%);pointer-events:none}
+.hero h1{font-size:clamp(30px,5vw,50px);font-weight:800;background:linear-gradient(135deg,#48484a,#5c5c64,#3a3a40);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
 .hero .date{font-size:18px;color:var(--text2);position:relative}
 .hero .range{font-size:12px;color:var(--text2);opacity:.6;margin-top:4px;position:relative}
 
@@ -27,16 +27,16 @@ html{scroll-behavior:smooth}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
 
 .card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.5);border-color:var(--accent)}
+.card:hover{transform:translateY(-3px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
 .card-img{height:120px;display:flex;align-items:center;justify-content:center}
 .card-icon{font-size:40px}
 .card-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
 .card-source{font-size:10px;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:6px}
 .card-body h3{font-size:15px;font-weight:700;line-height:1.5;margin-bottom:6px;flex:1}
 .card-body h3 a{color:var(--text);text-decoration:none;transition:color .2s}
-.card-body h3 a:hover{color:#00d4cc}
+.card-body h3 a:hover{color:var(--accent)}
 .card-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card-body time{font-size:10px;color:var(--text2);opacity:.5;margin-top:auto}
+.card-body time{font-size:10px;color:var(--text2);opacity:.6;margin-top:auto}
 
 .invest-section .card-img{height:100px}
 .invest-section .cat-title{color:var(--gold)}
@@ -44,20 +44,20 @@ html{scroll-behavior:smooth}
 .invest-section .card-source{color:var(--gold)}
 
 /* ── 搞钱总结区 ── */
-.summary-section{background:linear-gradient(135deg,#0f1923,#0d1b1a,#0f1923);border-top:2px solid #00b894;border-bottom:2px solid #00b894;margin-top:40px;padding:48px 24px}
+.summary-section{background:linear-gradient(135deg,#e4e4e9,#ececf0,#e4e4e9);border-top:2px solid #b0b0b6;border-bottom:2px solid #b0b0b6;margin-top:40px;padding:48px 24px}
 .summary-inner{max-width:900px;margin:0 auto}
-.summary-inner h2{font-size:26px;font-weight:800;color:#00cec9;text-align:center;margin-bottom:4px}
+.summary-inner h2{font-size:26px;font-weight:800;color:var(--text);text-align:center;margin-bottom:4px}
 .summary-inner .summary-sub{text-align:center;color:var(--text2);font-size:13px;margin-bottom:36px}
 .summary-block{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin-bottom:20px}
-.summary-block h3{font-size:17px;font-weight:700;margin-bottom:14px;color:#00cec9}
+.summary-block h3{font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text)}
 .opp-list,.gig-list,.learn-list,.platform-list{list-style:none;padding:0}
-.opp-list li,.gig-list li,.learn-list li,.platform-list li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;line-height:1.7}
+.opp-list li,.gig-list li,.learn-list li,.platform-list li{padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:14px;line-height:1.7}
 .opp-list li:last-child,.gig-list li:last-child,.learn-list li:last-child,.platform-list li:last-child{border-bottom:none}
-.opp-list a{color:#00cec9;text-decoration:none;font-weight:600}
+.opp-list a{color:var(--accent);text-decoration:none;font-weight:600}
 .opp-list a:hover{text-decoration:underline}
 .opp-src{font-size:10px;color:var(--text2);opacity:.6;margin-left:6px}
 .no-data{color:var(--text2);font-size:13px;font-style:italic}
-.gig-list strong,.learn-list strong{color:#ffd200}
+.gig-list strong,.learn-list strong{color:var(--gold)}
 .platform-list a{color:var(--accent);text-decoration:none;font-weight:600}
 .platform-list a:hover{text-decoration:underline}
 
@@ -68,7 +68,7 @@ html{scroll-behavior:smooth}
 
 /* ── 页面导航栏 ── */
 .page-nav{display:flex;align-items:center;justify-content:center;gap:16px;padding:14px 24px;
-  background:rgba(21,21,36,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;
   transition:box-shadow .3s}
 .page-nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.5)}
@@ -77,12 +77,12 @@ html{scroll-behavior:smooth}
   background:var(--card-bg);border:1px solid var(--border);border-radius:20px;
   color:var(--text);text-decoration:none;font-size:13px;font-weight:600;
   transition:all .2s;white-space:nowrap}
-.nav-btn:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);
-  box-shadow:0 4px 12px rgba(124,111,247,.2)}
+.nav-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(92,92,100,.15)}
 .nav-btn.disabled{opacity:.3;pointer-events:none;cursor:default}
 .nav-date{font-size:14px;font-weight:700;color:var(--text);text-align:center;min-width:140px}
-.nav-home{background:linear-gradient(135deg,rgba(124,111,247,.2),rgba(0,206,201,.2));
-  border-color:rgba(124,111,247,.4)}
+.nav-home{background:linear-gradient(135deg,rgba(92,92,100,.12),rgba(160,160,166,.12));
+  border-color:rgba(92,92,100,.25)}
 @media(max-width:768px){
   .page-nav{gap:8px;padding:10px 12px}
   .nav-btn{padding:8px 14px;font-size:12px;gap:3px}
@@ -96,10 +96,10 @@ html{scroll-behavior:smooth}
   max-width:900px;margin:0 auto;padding:16px 24px 0}
 .toc-label{font-size:12px;color:var(--text2);white-space:nowrap;font-weight:600}
 .toc a{font-size:12px;color:var(--text2);text-decoration:none;
-  padding:5px 14px;border-radius:14px;background:rgba(255,255,255,.03);
+  padding:5px 14px;border-radius:14px;background:rgba(0,0,0,.04);
   border:1px solid transparent;transition:all .2s;white-space:nowrap}
 .toc a:hover,.toc a.active{border-color:var(--accent);color:var(--accent);
-  background:rgba(124,111,247,.1)}
+  background:rgba(92,92,100,.08)}
 .container{padding-top:20px}
 
 /* ── 回到顶部按钮 ── */
@@ -111,7 +111,7 @@ html{scroll-behavior:smooth}
   pointer-events:none;display:flex;align-items:center;justify-content:center}
 .scroll-top-btn.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .scroll-top-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;
-  box-shadow:0 4px 20px rgba(124,111,247,.4)}
+  box-shadow:0 4px 20px rgba(92,92,100,.25)}
 @media(max-width:768px){.scroll-top-btn{bottom:20px;right:16px;width:40px;height:40px;font-size:18px}}
 
 /* ── 卡片入场动画 ── */
@@ -124,7 +124,7 @@ html{scroll-behavior:smooth}
 /* ── 复制链接按钮 ── */
 .copy-link-btn{position:absolute;top:10px;right:10px;z-index:5;
   width:32px;height:32px;border-radius:50%;border:1px solid var(--border);
-  background:rgba(21,21,36,.8);color:var(--text2);font-size:13px;
+  background:rgba(255,255,255,.85);color:var(--text2);font-size:13px;
   cursor:pointer;display:flex;align-items:center;justify-content:center;
   transition:all .2s;opacity:0;backdrop-filter:blur(4px)}
 .card:hover .copy-link-btn,.card:focus-within .copy-link-btn{opacity:1}
@@ -136,13 +136,13 @@ html{scroll-behavior:smooth}
   z-index:300;padding:10px 24px;background:var(--accent);color:#fff;
   border-radius:20px;font-size:13px;font-weight:600;opacity:0;
   transition:opacity .3s,transform .3s;pointer-events:none;
-  box-shadow:0 4px 20px rgba(124,111,247,.4)}
+  box-shadow:0 4px 20px rgba(92,92,100,.25)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── 折叠区块 ── */
 .collapsible-header{cursor:pointer;display:flex;align-items:center;justify-content:space-between;
   user-select:none}
-.collapsible-header:hover{color:#fff}
+.collapsible-header:hover{color:var(--accent)}
 .collapse-toggle{font-size:11px;transition:transform .3s;opacity:.6}
 .collapse-toggle.collapsed{transform:rotate(-90deg)}
 .collapsible-body{overflow:hidden;transition:max-height .4s ease,padding .4s ease;max-height:2000px}
@@ -168,8 +168,8 @@ html{scroll-behavior:smooth}
 .holiday-left,.holiday-right{position:absolute;pointer-events:none;z-index:5;user-select:none}
 .holiday-left{left:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
 .holiday-right{right:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
-.holiday-icon{font-size:clamp(38px,7vw,64px);animation:holidayFloat 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(124,111,247,.3))}
-.holiday-name{font-size:13px;font-weight:700;color:#fff;background:linear-gradient(135deg,rgba(124,111,247,.3),rgba(0,206,201,.25));padding:5px 16px;border-radius:16px;white-space:nowrap;border:1px solid rgba(124,111,247,.3);backdrop-filter:blur(4px)}
+.holiday-icon{font-size:clamp(38px,7vw,64px);animation:holidayFloat 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(92,92,100,.15))}
+.holiday-name{font-size:13px;font-weight:700;color:var(--text);background:linear-gradient(135deg,rgba(92,92,100,.15),rgba(160,160,166,.10));padding:5px 16px;border-radius:16px;white-space:nowrap;border:1px solid rgba(92,92,100,.2);backdrop-filter:blur(4px)}
 .holiday-art{font-size:clamp(30px,5vw,48px);animation:holidayFloat 3s ease-in-out infinite;animation-delay:1.5s;line-height:1.2;text-align:center}
 @keyframes holidayFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @media(max-width:768px){
@@ -203,7 +203,7 @@ html{scroll-behavior:smooth}
 <main class="container"><section class="category " id="section-llm">
 <h2 class="cat-title">🧠 大模型与基础研究<span class="count">2条</span></h2>
 <div class="cards"><article class="card card-animate" style="animation-delay:0.00s">
-<div class="card-img" style="background:linear-gradient(135deg, #667eea, #764ba2)"><span class="card-icon">🧠</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #636366, #48484a)"><span class="card-icon">🧠</span></div>
 <div class="card-body">
 <span class="card-source">HackerNews</span>
 <h3><a href="https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect/" target="_blank" rel="noopener">CSS-原生视差效果</a></h3>
@@ -213,7 +213,7 @@ html{scroll-behavior:smooth}
 <button class="copy-link-btn" data-url="https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect/" title="复制链接" aria-label="复制链接">🔗</button>
 </article>
 <article class="card card-animate" style="animation-delay:0.05s">
-<div class="card-img" style="background:linear-gradient(135deg, #667eea, #764ba2)"><span class="card-icon">🧠</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #636366, #48484a)"><span class="card-icon">🧠</span></div>
 <div class="card-body">
 <span class="card-source">HackerNews</span>
 <h3><a href="https://www.businessinsider.com/big-short-michael-burry-spacex-anthropic-ipo-ai-bubble-claude-2026-6" target="_blank" rel="noopener">Michael Burry 表示 SpaceX 和 Anthropic 都不值 1T 美元</a></h3>
@@ -224,7 +224,7 @@ html{scroll-behavior:smooth}
 </article></div></section><section class="category " id="section-app">
 <h2 class="cat-title">🚀 产业应用与产品<span class="count">2条</span></h2>
 <div class="cards"><article class="card card-animate" style="animation-delay:0.10s">
-<div class="card-img" style="background:linear-gradient(135deg, #f093fb, #f5576c)"><span class="card-icon">🚀</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🚀</span></div>
 <div class="card-body">
 <span class="card-source">TechCrunch</span>
 <h3><a href="https://techcrunch.com/2026/06/02/pacific-fusions-latest-prototype-packs-440-gigawatts-into-an-80-nanosecond-burst/" target="_blank" rel="noopener">Pacific Fusion 的最新原型可在 80 纳秒的突发时间内产生 440 吉瓦的功率</a></h3>
@@ -234,7 +234,7 @@ html{scroll-behavior:smooth}
 <button class="copy-link-btn" data-url="https://techcrunch.com/2026/06/02/pacific-fusions-latest-prototype-packs-440-gigawatts-into-an-80-nanosecond-burst/" title="复制链接" aria-label="复制链接">🔗</button>
 </article>
 <article class="card card-animate" style="animation-delay:0.15s">
-<div class="card-img" style="background:linear-gradient(135deg, #f093fb, #f5576c)"><span class="card-icon">🚀</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🚀</span></div>
 <div class="card-body">
 <span class="card-source">Bing</span>
 <h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1eb97ca72c43688f591581f3d2698e&url=https%3a%2f%2fwww.manilatimes.net%2f2026%2f06%2f02%2ftmt-newswire%2fglobenewswire%2fmitwell-accelerates-physical-ai-deployment-with-a-multi-platform-edge-ai-development-ecosystem-at-computex-2026%2f2356581&c=15051403651920439141&mkt=en-sg" target="_blank" rel="noopener">MiTwell 在 COMPUTEX 2026 上利用多平台边缘人工智能开发生态系统加速物理人工智能部署</a></h3>
@@ -245,7 +245,7 @@ html{scroll-behavior:smooth}
 </article></div></section><section class="category invest-section" id="section-invest">
 <h2 class="cat-title">📈 金融投资分析<span class="count">2条</span></h2>
 <div class="cards"><article class="card card-animate" style="animation-delay:0.20s">
-<div class="card-img" style="background:linear-gradient(135deg, #f7971e, #ffd200)"><span class="card-icon">📈</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #c46e00, #e07b00)"><span class="card-icon">📈</span></div>
 <div class="card-body">
 <span class="card-source">Bing</span>
 <h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1eb97cbb7b43cf8b1ddb4a5e34a305&url=https%3a%2f%2fwww.outlookbusiness.com%2fmarkets%2fsouth-korea-overtakes-india-in-market-value-but-the-real-story-is-the-ai-trade&c=17538253269087576419&mkt=en-sg" target="_blank" rel="noopener">韩国的市场价值超过印度，但真正的故事是人工智能贸易</a></h3>
@@ -255,7 +255,7 @@ html{scroll-behavior:smooth}
 <button class="copy-link-btn" data-url="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1eb97cbb7b43cf8b1ddb4a5e34a305&url=https%3a%2f%2fwww.outlookbusiness.com%2fmarkets%2fsouth-korea-overtakes-india-in-market-value-but-the-real-story-is-the-ai-trade&c=17538253269087576419&mkt=en-sg" title="复制链接" aria-label="复制链接">🔗</button>
 </article>
 <article class="card card-animate" style="animation-delay:0.25s">
-<div class="card-img" style="background:linear-gradient(135deg, #f7971e, #ffd200)"><span class="card-icon">📈</span></div>
+<div class="card-img" style="background:linear-gradient(135deg, #c46e00, #e07b00)"><span class="card-icon">📈</span></div>
 <div class="card-body">
 <span class="card-source">Bing</span>
 <h3><a href="http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a1eb97cdb2248a99bdcfe2f3e3cbec8&url=https%3a%2f%2ffinance.yahoo.com%2fsectors%2ftechnology%2farticles%2fstmicro-raises-data-centre-revenue-102436626.html&c=11736931229019292690&mkt=en-sg" target="_blank" rel="noopener">随着人工智能需求加速 (STM)，STMicro 将数据中心收入预测提高至 10 亿美元</a></h3>
@@ -321,7 +321,7 @@ html{scroll-behavior:smooth}
 </nav>
 
 <footer class="footer">
-<p>AI 每日快报 · 自动生成于 2026-06-02 19:38 (北京时间)</p>
+<p>AI 每日快报 · 自动生成于 2026-06-02 19:52 (北京时间)</p>
 <p>数据源：TechCrunch · HackerNews · MIT科技评论 · 36氪 · Bing News</p>
 <p style="margin-top:2px"><a href="https://river897.top" style="color:var(--accent);text-decoration:none">https://river897.top</a></p>
 <p style="margin-top:6px;opacity:.6">⚠ 投资分析仅供参考，不构成投资建议</p>
