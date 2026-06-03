@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>AI 日报 | 2026年06月03日</title>
+<style>
+:root{--bg:#ececf0;--bg-rgb:236,236,240;--card-bg:#ffffff;--border:#d4d4d8;--text:#1c1c1e;--text2:#6e6e73;--accent:#5c5c64;--gold:#c46e00;--r:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(rgba(var(--bg-rgb),0.58),rgba(var(--bg-rgb),0.58)),url("bg-wallpaper.png") center/cover no-repeat fixed;color:var(--text);line-height:1.7}
+html{scroll-behavior:smooth}
+
+.hero{background:linear-gradient(135deg,#d8d8de,#e4e4e9,#d0d0d6,#ececf0);border-bottom:1px solid var(--border);padding:52px 24px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(92,92,100,.06) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(92,92,100,.04) 0%,transparent 50%);pointer-events:none}
+.hero h1{font-size:clamp(30px,5vw,50px);font-weight:800;background:linear-gradient(135deg,#48484a,#5c5c64,#3a3a40);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
+.hero .date{font-size:18px;color:var(--text2);position:relative}
+.hero .range{font-size:12px;color:var(--text2);opacity:.6;margin-top:4px;position:relative}
+
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:18px 24px;background:var(--card-bg);border-bottom:1px solid var(--border)}
+.stat-num{font-size:26px;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:11px;color:var(--text2);letter-spacing:.1em}
+
+.container{max-width:900px;margin:0 auto;padding:0 24px 20px}
+.category{margin-bottom:44px}
+.cat-title{font-size:20px;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:baseline;gap:8px}
+.count{font-size:11px;color:var(--text2);font-weight:400;background:var(--card-bg);padding:2px 10px;border-radius:20px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
+
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
+.card-img{height:120px;display:flex;align-items:center;justify-content:center}
+.card-icon{font-size:40px}
+.card-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.card-source{font-size:10px;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.card-body h3{font-size:15px;font-weight:700;line-height:1.5;margin-bottom:6px;flex:1}
+.card-body h3 a{color:var(--text);text-decoration:none;transition:color .2s}
+.card-body h3 a:hover{color:var(--accent)}
+.card-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-body time{font-size:10px;color:var(--text2);opacity:.6;margin-top:auto}
+
+.invest-section .card-img{height:100px}
+.invest-section .cat-title{color:var(--gold)}
+.invest-section .card:hover{border-color:var(--gold)}
+.invest-section .card-source{color:var(--gold)}
+
+/* ── 搞钱总结区 ── */
+.summary-section{background:linear-gradient(135deg,#e4e4e9,#ececf0,#e4e4e9);border-top:2px solid #b0b0b6;border-bottom:2px solid #b0b0b6;margin-top:40px;padding:48px 24px}
+.summary-inner{max-width:900px;margin:0 auto}
+.summary-inner h2{font-size:26px;font-weight:800;color:var(--text);text-align:center;margin-bottom:4px}
+.summary-inner .summary-sub{text-align:center;color:var(--text2);font-size:13px;margin-bottom:36px}
+.summary-block{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin-bottom:20px}
+.summary-block h3{font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text)}
+.opp-list,.gig-list,.learn-list,.platform-list{list-style:none;padding:0}
+.opp-list li,.gig-list li,.learn-list li,.platform-list li{padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:14px;line-height:1.7}
+.opp-list li:last-child,.gig-list li:last-child,.learn-list li:last-child,.platform-list li:last-child{border-bottom:none}
+.opp-list a{color:var(--accent);text-decoration:none;font-weight:600}
+.opp-list a:hover{text-decoration:underline}
+.opp-src{font-size:10px;color:var(--text2);opacity:.6;margin-left:6px}
+.no-data{color:var(--text2);font-size:13px;font-style:italic}
+.gig-list strong,.learn-list strong{color:var(--gold)}
+.platform-list a{color:var(--accent);text-decoration:none;font-weight:600}
+.platform-list a:hover{text-decoration:underline}
+
+.footer{text-align:center;padding:32px;color:var(--text2);font-size:11px;border-top:1px solid var(--border);line-height:1.8}
+
+@media(max-width:768px){.cards{grid-template-columns:1fr}.hero{padding:36px 16px 28px}.stats{gap:24px}}
+
+
+/* ── 页面导航栏 ── */
+.page-nav{display:flex;align-items:center;justify-content:center;gap:16px;padding:14px 24px;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;
+  transition:box-shadow .3s}
+.page-nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.page-nav-bottom{border-bottom:none;border-top:1px solid var(--border);margin-top:40px}
+.nav-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;
+  background:var(--card-bg);border:1px solid var(--border);border-radius:20px;
+  color:var(--text);text-decoration:none;font-size:13px;font-weight:600;
+  transition:all .2s;white-space:nowrap}
+.nav-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(92,92,100,.15)}
+.nav-btn.disabled{opacity:.3;pointer-events:none;cursor:default}
+.nav-date{font-size:14px;font-weight:700;color:var(--text);text-align:center;min-width:140px}
+.nav-home{background:linear-gradient(135deg,rgba(92,92,100,.12),rgba(160,160,166,.12));
+  border-color:rgba(92,92,100,.25)}
+@media(max-width:768px){
+  .page-nav{gap:8px;padding:10px 12px}
+  .nav-btn{padding:8px 14px;font-size:12px;gap:3px}
+  .nav-date{font-size:13px;min-width:90px}
+  .nav-btn .nav-label{display:none}
+  .nav-btn .nav-icon{font-size:16px}
+}
+
+/* ── 页内目录 TOC ── */
+.toc{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  max-width:900px;margin:0 auto;padding:16px 24px 0}
+.toc-label{font-size:12px;color:var(--text2);white-space:nowrap;font-weight:600}
+.toc a{font-size:12px;color:var(--text2);text-decoration:none;
+  padding:5px 14px;border-radius:14px;background:rgba(0,0,0,.04);
+  border:1px solid transparent;transition:all .2s;white-space:nowrap}
+.toc a:hover,.toc a.active{border-color:var(--accent);color:var(--accent);
+  background:rgba(92,92,100,.08)}
+.container{padding-top:20px}
+
+/* ── 回到顶部按钮 ── */
+.scroll-top-btn{position:fixed;bottom:32px;right:28px;z-index:200;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--border);
+  background:var(--card-bg);color:var(--text);font-size:20px;
+  cursor:pointer;opacity:0;transform:translateY(12px);
+  transition:opacity .3s,transform .3s,background .2s,box-shadow .2s;
+  pointer-events:none;display:flex;align-items:center;justify-content:center}
+.scroll-top-btn.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.scroll-top-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;
+  box-shadow:0 4px 20px rgba(92,92,100,.25)}
+@media(max-width:768px){.scroll-top-btn{bottom:20px;right:16px;width:40px;height:40px;font-size:18px}}
+
+/* ── 卡片入场动画 ── */
+@media(prefers-reduced-motion:no-preference){
+  .card-animate{opacity:0;transform:translateY(20px);
+    animation:cardFadeIn .5s ease forwards}
+  @keyframes cardFadeIn{to{opacity:1;transform:translateY(0)}}
+}
+
+/* ── 复制链接按钮 ── */
+.copy-link-btn{position:absolute;top:10px;right:10px;z-index:5;
+  width:32px;height:32px;border-radius:50%;border:1px solid var(--border);
+  background:rgba(255,255,255,.85);color:var(--text2);font-size:13px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;opacity:0;backdrop-filter:blur(4px)}
+.card:hover .copy-link-btn,.card:focus-within .copy-link-btn{opacity:1}
+.copy-link-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.card{position:relative}
+
+/* ── Toast 提示 ── */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);
+  z-index:300;padding:10px 24px;background:var(--accent);color:#fff;
+  border-radius:20px;font-size:13px;font-weight:600;opacity:0;
+  transition:opacity .3s,transform .3s;pointer-events:none;
+  box-shadow:0 4px 20px rgba(92,92,100,.25)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── 折叠区块 ── */
+.collapsible-header{cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+  user-select:none}
+.collapsible-header:hover{color:var(--accent)}
+.collapse-toggle{font-size:11px;transition:transform .3s;opacity:.6}
+.collapse-toggle.collapsed{transform:rotate(-90deg)}
+.collapsible-body{overflow:hidden;transition:max-height .4s ease,padding .4s ease;max-height:2000px}
+.collapsible-body.collapsed{max-height:0;padding-top:0;padding-bottom:0;margin:0}
+
+/* ── 首页搜索框 ── */
+.search-box{max-width:800px;margin:0 auto 24px;padding:0 24px}
+.search-input{width:100%;padding:12px 18px;background:var(--card-bg);border:1px solid var(--border);
+  border-radius:var(--r);color:var(--text);font-size:14px;outline:none;
+  transition:border-color .2s;font-family:inherit}
+.search-input:focus{border-color:var(--accent)}
+.search-input::placeholder{color:var(--text2);opacity:.5}
+
+/* ── 键盘提示 ── */
+.kbd-hint{display:inline-block;font-size:9px;color:var(--text2);background:var(--card-bg);
+  border:1px solid var(--border);border-radius:3px;padding:1px 5px;margin:0 2px;
+  font-family:monospace;opacity:.6}
+
+/* ── 导航图标 ── */
+.nav-icon{font-size:15px;line-height:1}
+
+/* ── 节日装饰 ── */
+.holiday-left,.holiday-right{position:absolute;pointer-events:none;z-index:5;user-select:none}
+.holiday-left{left:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.holiday-right{right:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
+.holiday-icon{font-size:clamp(38px,7vw,64px);animation:holidayFloat 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(92,92,100,.15))}
+.holiday-name{font-size:13px;font-weight:700;color:var(--text);background:linear-gradient(135deg,rgba(92,92,100,.15),rgba(160,160,166,.10));padding:5px 16px;border-radius:16px;white-space:nowrap;border:1px solid rgba(92,92,100,.2);backdrop-filter:blur(4px)}
+.holiday-art{font-size:clamp(30px,5vw,48px);animation:holidayFloat 3s ease-in-out infinite;animation-delay:1.5s;line-height:1.2;text-align:center}
+@keyframes holidayFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:768px){
+  .holiday-left{left:8px}.holiday-right{display:none}
+  .holiday-icon{font-size:32px}.holiday-name{font-size:11px;padding:3px 10px}
+}
+
+</style></head>
+<body>
+<header class="hero">
+
+<h1>AI 每日快报</h1>
+<p class="date">2026年06月03日 星期三</p>
+<p class="range">统计时段：06/02 12:00 → 06/03 12:00</p>
+</header>
+<div class="stats">
+<div><div class="stat-num">0</div><div class="stat-lbl">精选新闻</div></div>
+<div><div class="stat-num">0</div><div class="stat-lbl">关注领域</div></div>
+<div><div class="stat-num">⏱ 1min</div><div class="stat-lbl">预计阅读</div></div>
+</div>
+
+<nav class="toc" id="toc"><span class="toc-label">快速导航：</span><a href="#section-summary">📋 学习指南</a></nav>
+<main class="container"></main>
+
+<section class="summary-section" id="section-summary">
+<div class="summary-inner">
+<h2>📋 搞钱机会 & 学习指南</h2>
+<p class="summary-sub">基于今日新闻 + 行业趋势的综合建议</p>
+<section class="summary-block">
+<h3 class="collapsible-header">🔥 搞钱机会速递 <span class="collapse-toggle">▼</span></h3>
+<div class="collapsible-body">
+<p class="no-data">今日暂无抓取到新的兼职机会，可关注下方固定渠道。</p>
+</div>
+</section>
+<section class="summary-block">
+<h3 class="collapsible-header">💼 当前热门AI兼职方向 <span class="collapse-toggle">▼</span></h3>
+<div class="collapsible-body">
+<ul class="gig-list">
+<li><strong>AI 训练师 / 数据标注员</strong>：如 xAI、OpenAI、Scale AI、DataAnnotation 等平台常年招聘，时薪 $20–50，无需编程基础，会用AI工具即可。<strong>马斯克的 xAI 频繁招募各语种 AI Trainer</strong>，关注 xAI 官网 careers 页面。</li>
+<li><strong>Prompt 工程师 / AI 应用顾问</strong>：帮企业搭建 AI 工作流、写 Prompt 模板、做自动化流程，自由职业平台（Upwork / Fiverr）需求旺盛，单价 $50–500/单。</li>
+<li><strong>AI 内容创作者</strong>：用 AI 工具写文章、做视频、生成图片，接商单变现。门槛低、启动快，适合学生党。</li>
+<li><strong>AI 微调 / 模型部署自由职业</strong>：帮小企业微调开源模型（Llama、Qwen等）、部署 AI 服务，需要一定编程基础，客单价 ¥3,000–20,000。</li>
+<li><strong>AI 教育 / 培训讲师</strong>：在小红书/B站/抖音做 AI 科普、工具教学，积累粉丝后接广告或卖课。目前仍是蓝海。</li>
+</ul>
+</div>
+</section>
+<section class="summary-block">
+<h3 class="collapsible-header">🎯 值得投入的学习方向 <span class="collapse-toggle">▼</span></h3>
+<div class="collapsible-body">
+<ul class="learn-list">
+<li><strong>AI Agent 开发</strong>：2026 年 Agent 大爆发，学会用 LangChain / AutoGPT / CrewAI 搭 Agent 工作流，市场需求巨大。建议学 Python + Agent 框架 + API 调用。</li>
+<li><strong>开源模型微调与部署</strong>：Llama 4、Qwen 3 等开源模型越来越强，企业私有化部署需求激增。建议学 LoRA 微调、vLLM 推理、向量数据库。</li>
+<li><strong>AI + 垂直行业</strong>：AI+法律、AI+医疗、AI+金融……把 AI 能力和某个行业知识结合，是最难被替代的方向。建议深耕一个你感兴趣的行业。</li>
+<li><strong>AI 安全与对齐</strong>：随着 AI 能力增强，安全/对齐方向人才缺口巨大，薪资高、竞争小。适合喜欢研究型工作的同学。</li>
+<li><strong>多模态 AI 应用</strong>：视频生成（Sora/Kling）、语音克隆、数字人……多模态是 2026 最大风口。建议多动手做项目，积累作品集。</li>
+</ul>
+</div>
+</section>
+<section class="summary-block">
+<h3 class="collapsible-header">🔍 去哪里找机会 <span class="collapse-toggle">▼</span></h3>
+<div class="collapsible-body">
+<ul class="platform-list">
+<li><a href="https://upwork.com" target="_blank" rel="noopener">Upwork</a> — 全球最大自由职业平台，AI 相关项目很多</li>
+<li><a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> — 适合接小单，AI 头像/配音/Prompt 模板等</li>
+<li><a href="https://dataannotation.tech" target="_blank" rel="noopener">DataAnnotation</a> — 专注 AI 数据标注，时薪 $20+</li>
+<li><a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> — 远程工作聚合，常有 AI 相关岗位</li>
+<li><a href="https://zhipin.com" target="_blank" rel="noopener">BOSS直聘</a> — 搜「AI训练师」「AI标注」「远程」等关键词</li>
+<li><a href="https://zbj.com" target="_blank" rel="noopener">猪八戒网</a> — 国内自由职业平台，AI 相关需求增长快</li>
+<li><a href="https://xiaohongshu.com" target="_blank" rel="noopener">小红书/即刻</a> — 搜「AI兼职」「AI接单」，有很多经验分享</li>
+</ul>
+</div>
+</section>
+</div>
+</section>
+
+<nav class="page-nav page-nav-bottom" id="bottom-nav">
+<a href="index.html" class="nav-btn nav-home"><span class="nav-icon">🏠</span> <span class="nav-label">首页</span></a>
+</nav>
+
+<footer class="footer">
+<p>AI 每日快报 · 自动生成于 2026-06-03 12:07 (北京时间)</p>
+<p>数据源：TechCrunch · HackerNews · MIT科技评论 · 36氪 · Bing News</p>
+<p style="margin-top:2px"><a href="https://river897.top" style="color:var(--accent);text-decoration:none">https://river897.top</a></p>
+<p style="margin-top:6px;opacity:.6">⚠ 投资分析仅供参考，不构成投资建议</p>
+<p style="margin-top:4px;opacity:.4;font-size:10px">键盘快捷键：<span class="kbd-hint">←</span> 前一天 <span class="kbd-hint">→</span> 后一天 <span class="kbd-hint">H</span> 首页 <span class="kbd-hint">T</span> 回到顶部</p>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="回到顶部">↑</button>
+<div class="toast" id="toast"></div>
+
+<script>
+
+(function(){
+  /* ── 回到顶部按钮 ── */
+  var btn = document.getElementById('scrollTopBtn');
+  if(btn){
+    var ticking = false;
+    function onScroll(){
+      if(!ticking){requestAnimationFrame(function(){
+        btn.classList.toggle('visible', window.scrollY > 400);
+        var nav = document.getElementById('top-nav');
+        if(nav) nav.classList.toggle('scrolled', window.scrollY > 80);
+        ticking = false;
+      });ticking=true;}
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    btn.addEventListener('click', function(){window.scrollTo({top:0,behavior:'smooth'});});
+  }
+
+  /* ── 复制链接 ── */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.copy-link-btn');
+    if(!btn) return;
+    e.preventDefault();
+    var url = btn.getAttribute('data-url');
+    if(!url) return;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){showToast('链接已复制！');}).catch(function(){showToast('复制失败，请手动复制');});
+    }else{
+      var ta = document.createElement('textarea');ta.value=url;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');showToast('链接已复制！');}catch(e){showToast('复制失败，请手动复制');}
+      document.body.removeChild(ta);
+    }
+  });
+
+  /* ── Toast ── */
+  var toastTimer;
+  function showToast(msg){
+    var t = document.getElementById('toast');
+    if(!t) return;
+    t.textContent = msg;t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){t.classList.remove('show');},1800);
+  }
+
+  /* ── 折叠区块 ── */
+  document.querySelectorAll('.collapsible-header').forEach(function(h){
+    h.addEventListener('click', function(){
+      var body = this.nextElementSibling;
+      var toggle = this.querySelector('.collapse-toggle');
+      if(!body) return;
+      var collapsed = body.classList.toggle('collapsed');
+      if(toggle) toggle.classList.toggle('collapsed', collapsed);
+    });
+  });
+
+  /* ── TOC 高亮 ── */
+  if('IntersectionObserver' in window){
+    var sections = document.querySelectorAll('[id^="section-"]');
+    var tocLinks = document.querySelectorAll('.toc a');
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          tocLinks.forEach(function(a){a.classList.remove('active');
+            if(a.getAttribute('href')==='#'+entry.target.id) a.classList.add('active');
+          });
+        }
+      });
+    },{rootMargin:'-20% 0px -70% 0px'});
+    sections.forEach(function(s){observer.observe(s);});
+  }
+
+  /* ── 键盘导航 ── */
+  var isInput = function(){var t=document.activeElement;return t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable);};
+  document.addEventListener('keydown',function(e){
+    if(isInput()) return;
+    var k = e.key;
+    if(k==='ArrowLeft'){var b=document.querySelector('.nav-prev:not(.disabled)');if(b) b.click();}
+    else if(k==='ArrowRight'){var b=document.querySelector('.nav-next:not(.disabled)');if(b) b.click();}
+    else if(k==='h'||k==='H'){window.location.href='index.html';}
+    else if(k==='t'||k==='T'){window.scrollTo({top:0,behavior:'smooth'});}
+  });
+
+  /* ── 首页搜索 ── */
+  var searchInput = document.getElementById('searchInput');
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      var q = this.value.toLowerCase();
+      document.querySelectorAll('.date-list li').forEach(function(li){
+        var text = (li.textContent||'').toLowerCase();
+        li.style.display = q ? (text.indexOf(q)>=0?'':'none') : '';
+      });
+    });
+  }
+})();
+
+</script>
+</body></html>
