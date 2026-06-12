@@ -5,7 +5,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>AI 日报 | 2026年06月10日</title>
+<title>AI 日报 | 2026年06月12日</title>
 <style>
 :root{--bg:#ececf0;--bg-rgb:236,236,240;--card-bg:#ffffff;--border:#d4d4d8;--text:#1c1c1e;--text2:#6e6e73;--accent:#5c5c64;--gold:#c46e00;--r:12px}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -67,7 +67,6 @@ html{scroll-behavior:smooth}
 .footer{text-align:center;padding:32px;color:var(--text2);font-size:11px;border-top:1px solid var(--border);line-height:1.8}
 
 @media(max-width:768px){.cards{grid-template-columns:1fr}.hero{padding:36px 16px 28px}.stats{gap:24px}}
-
 
 /* ── 页面导航栏 ── */
 .page-nav{display:flex;align-items:center;justify-content:center;gap:16px;padding:14px 24px;
@@ -151,23 +150,13 @@ html{scroll-behavior:smooth}
 .collapsible-body{overflow:hidden;transition:max-height .4s ease,padding .4s ease;max-height:2000px}
 .collapsible-body.collapsed{max-height:0;padding-top:0;padding-bottom:0;margin:0}
 
-/* ── 首页搜索框 ── */
-.search-box{max-width:800px;margin:0 auto 24px;padding:0 24px}
-.search-input{width:100%;padding:12px 18px;background:var(--card-bg);border:1px solid var(--border);
-  border-radius:var(--r);color:var(--text);font-size:14px;outline:none;
-  transition:border-color .2s;font-family:inherit}
-.search-input:focus{border-color:var(--accent)}
-.search-input::placeholder{color:var(--text2);opacity:.5}
-
-/* ── 键盘提示 ── */
+/* 键盘提示 */
 .kbd-hint{display:inline-block;font-size:9px;color:var(--text2);background:var(--card-bg);
   border:1px solid var(--border);border-radius:3px;padding:1px 5px;margin:0 2px;
   font-family:monospace;opacity:.6}
-
-/* ── 导航图标 ── */
 .nav-icon{font-size:15px;line-height:1}
 
-/* ── 节日装饰 ── */
+/* 节日装饰 */
 .holiday-left,.holiday-right{position:absolute;pointer-events:none;z-index:5;user-select:none}
 .holiday-left{left:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
 .holiday-right{right:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -179,44 +168,140 @@ html{scroll-behavior:smooth}
   .holiday-left{left:8px}.holiday-right{display:none}
   .holiday-icon{font-size:32px}.holiday-name{font-size:11px;padding:3px 10px}
 }
-
 </style></head>
 <body>
 <header class="hero">
 
 <h1>AI 每日快报</h1>
-<p class="date">2026年06月10日 星期三</p>
-<p class="range">统计时段：06/09 12:00 → 06/10 12:00</p>
+<p class="date">2026年06月12日 星期四</p>
+<p class="range">统计时段：06/11 12:00 → 06/12 12:00</p>
 </header>
 <div class="stats">
-<div><div class="stat-num">0</div><div class="stat-lbl">精选新闻</div></div>
-<div><div class="stat-num">0</div><div class="stat-lbl">关注领域</div></div>
-<div><div class="stat-num">⏱ 1min</div><div class="stat-lbl">预计阅读</div></div>
+<div><div class="stat-num">8</div><div class="stat-lbl">精选新闻</div></div>
+<div><div class="stat-num">4</div><div class="stat-lbl">关注领域</div></div>
+<div><div class="stat-num">⏱ 6min</div><div class="stat-lbl">预计阅读</div></div>
 </div>
+
 <nav class="page-nav" id="top-nav">
   <a href="index.html" class="nav-btn nav-home"><span class="nav-icon">🏠</span> <span class="nav-label">首页</span></a>
-  <a href="2026-06-09.html" class="nav-btn nav-prev"><span class="nav-icon">←</span> <span class="nav-label">前一天</span></a>
-  <span class="nav-date">2026年06月10日 星期三</span>
-  <a href="2026-06-11.html" class="nav-btn nav-next"><span class="nav-label">后一天</span> <span class="nav-icon">→</span></a>
+  <a href="2026-06-11.html" class="nav-btn nav-prev"><span class="nav-icon">←</span> <span class="nav-label">前一天</span></a>
+  <span class="nav-date">06月12日 周四</span>
+  <span class="nav-btn nav-next disabled"><span class="nav-label">后一天</span> <span class="nav-icon">→</span></span>
 </nav>
-<nav class="toc" id="toc"><span class="toc-label">快速导航：</span><a href="#section-summary">📋 学习指南</a></nav>
-<main class="container"></main>
+
+<nav class="toc" id="toc"><span class="toc-label">快速导航：</span><a href="#section-llm">🧠 大模型</a>
+<a href="#section-app">🚀 产业应用</a>
+<a href="#section-manufacturing">🏭 智能制造</a>
+<a href="#section-invest">📈 市场分析</a>
+<a href="#section-summary">📋 搞钱指南</a></nav>
+<main class="container"><section class="category " id="section-llm">
+<h2 class="cat-title">🧠 大模型与AI平台<span class="count">3条</span></h2>
+<div class="cards"><article class="card card-animate" style="animation-delay:0.00s">
+<div class="card-img" style="background:linear-gradient(135deg, #636366, #48484a)"><span class="card-icon">🎤</span></div>
+<div class="card-body">
+<span class="card-source">AMD / MIT</span>
+<h3><a href="https://news.qq.com/rain/a/20260612A04VRV00" target="_blank" rel="noopener">AMD CEO苏姿丰MIT演讲：AI无法替代人类判断与责任</a></h3>
+<p class="card-desc">AMD首席执行官苏姿丰在MIT毕业典礼上强调，AI擅长数据处理但无法决定哪些问题值得解决、在缺乏数据时无法做出艰难判断、更不能为结果承担责任。"最终决定未来的是人类，而非技术。"微软AI负责人苏莱曼也澄清AI仅替代重复性任务。</p>
+<time>06-12 08:00</time>
+</div>
+<button class="copy-link-btn" data-url="https://news.qq.com/rain/a/20260612A04VRV00" title="复制链接" aria-label="复制链接">🔗</button>
+</article>
+<article class="card card-animate" style="animation-delay:0.05s">
+<div class="card-img" style="background:linear-gradient(135deg, #636366, #48484a)"><span class="card-icon">🚀</span></div>
+<div class="card-body">
+<span class="card-source">Prometheus / Jeff Bezos</span>
+<h3><a href="https://www.theedgesingapore.com/news/artificial-intelligence/jeff-bezos-ai-start-prometheus-valued-us41-bil-funding-round" target="_blank" rel="noopener">贝索斯AI初创Prometheus估值410亿美元，聚焦"物理AI"</a></h3>
+<p class="card-desc">贝索斯AI公司Prometheus完成120亿美元融资，摩根大通、高盛、贝莱德参投，估值达410亿美元。公司聚焦工程制造和航空航天领域"物理AI"模型与工具，仅150名员工，人均估值超2.7亿美元。贝索斯还计划募集数百亿资金成立控股公司收购受益于其技术的企业。</p>
+<time>06-12 09:30</time>
+</div>
+<button class="copy-link-btn" data-url="https://www.theedgesingapore.com/news/artificial-intelligence/jeff-bezos-ai-start-prometheus-valued-us41-bil-funding-round" title="复制链接" aria-label="复制链接">🔗</button>
+</article>
+<article class="card card-animate" style="animation-delay:0.10s">
+<div class="card-img" style="background:linear-gradient(135deg, #636366, #48484a)"><span class="card-icon">🤝</span></div>
+<div class="card-body">
+<span class="card-source">DXC / Anthropic</span>
+<h3><a href="https://en.yna.co.kr/view/RPR20260611008500353" target="_blank" rel="noopener">DXC与Anthropic宣布多年全球联盟，数万名Claude认证工程师入驻客户环境</a></h3>
+<p class="card-desc">DXC成为Anthropic Claude合作伙伴网络全球顶级合作伙伴。数万名Claude认证工程师将深入客户环境部署AI。Claude已驱动DXC OASIS平台，50+联合客户投入生产，超过95%代码由Claude生成后经人工审查，软件开发速度提升约10倍。首期聚焦保险、网络安全、应用现代化。</p>
+<time>06-12 07:00</time>
+</div>
+<button class="copy-link-btn" data-url="https://en.yna.co.kr/view/RPR20260611008500353" title="复制链接" aria-label="复制链接">🔗</button>
+</article></div></section><section class="category " id="section-app">
+<h2 class="cat-title">🚀 产业应用与产品<span class="count">2条</span></h2>
+<div class="cards"><article class="card card-animate" style="animation-delay:0.15s">
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🏥</span></div>
+<div class="card-body">
+<span class="card-source">Nvidia / Abridge</span>
+<h3><a href="https://www.cls.cn/detail/2398096" target="_blank" rel="noopener">英伟达联手Abridge训练医疗AI模型，A股AI医疗概念集体涨停</a></h3>
+<p class="card-desc">英伟达与医疗AI笔记公司Abridge合作，基于Nemotron开源模型训练医疗专用AI，覆盖药物研发、医疗器械和数字健康。A股迪安诊断20cm涨停，金域医学涨超9%。AI在医疗领域的落地正在加速。</p>
+<time>06-12 10:30</time>
+</div>
+<button class="copy-link-btn" data-url="https://www.cls.cn/detail/2398096" title="复制链接" aria-label="复制链接">🔗</button>
+</article>
+<article class="card card-animate" style="animation-delay:0.20s">
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🧠</span></div>
+<div class="card-body">
+<span class="card-source">北京智源大会 / Edge AI Daily</span>
+<h3><a href="https://www.tmtpost.com/8025087.html" target="_blank" rel="noopener">第八届北京智源大会开幕；苹果CoreAI引擎发布；AWS Graviton5亮相</a></h3>
+<p class="card-desc">北京智源大会汇聚200+顶尖专家、40+AI企业CEO，围绕Agent、世界模型、具身智能等前沿议题设25场论坛。苹果WWDC发布CoreAI引擎替代CoreML，端侧大模型推理速度提升2.47倍。AWS发布Graviton5：192核Arm处理器，性能提升25-35%。OpenAI收购Ona强化AI代理能力。</p>
+<time>06-12 08:30</time>
+</div>
+<button class="copy-link-btn" data-url="https://www.tmtpost.com/8025087.html" title="复制链接" aria-label="复制链接">🔗</button>
+</article></div></section><section class="category " id="section-manufacturing">
+<h2 class="cat-title">🏭 AI+智能制造<span class="count">2条</span></h2>
+<div class="cards"><article class="card card-animate" style="animation-delay:0.25s">
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🇨🇳</span></div>
+<div class="card-body">
+<span class="card-source">新华社</span>
+<h3><a href="http://www.xinhuanet.com/info/20260612/1a6f1f05626749028b5ccf83409a412d/c.html" target="_blank" rel="noopener">国务院部署新一代智能制造：累计建成3.5万+智能工厂</a></h3>
+<p class="card-desc">国务院常务会议确立"发展新一代智能制造为主攻方向"。我国已建成3.5万家基础级、8200余家先进级、500余家卓越级智能工厂。AI正驱动制造业全流程系统性变革，催生数万亿元级市场空间。AI与制造业深度融合成为国家战略。</p>
+<time>06-12 10:00</time>
+</div>
+<button class="copy-link-btn" data-url="http://www.xinhuanet.com/info/20260612/1a6f1f05626749028b5ccf83409a412d/c.html" title="复制链接" aria-label="复制链接">🔗</button>
+</article>
+<article class="card card-animate" style="animation-delay:0.30s">
+<div class="card-img" style="background:linear-gradient(135deg, #8e8e93, #636366)"><span class="card-icon">🌍</span></div>
+<div class="card-body">
+<span class="card-source">柏林互联世界大会</span>
+<h3><a href="https://www.news.cn/world/20260612/bd14190da286476abc8efbae9775a2d2/c.html" target="_blank" rel="noopener">博世互联世界大会：AI加速从数字世界走向物理世界</a></h3>
+<p class="card-desc">博世柏林大会核心共识：具身智能与人形机器人将在工厂率先落地；阿里蔡崇信称制造业是AI最具潜力方向；大众CEO表示中国正成为技术创新发源地。全球云服务商2026年资本支出预计达8000亿美元，AI基础设施投资持续高涨。</p>
+<time>06-12 11:00</time>
+</div>
+<button class="copy-link-btn" data-url="https://www.news.cn/world/20260612/bd14190da286476abc8efbae9775a2d2/c.html" title="复制链接" aria-label="复制链接">🔗</button>
+</article></div></section><section class="category invest-section" id="section-invest">
+<h2 class="cat-title">📈 金融与市场分析<span class="count">1条</span></h2>
+<div class="cards"><article class="card card-animate" style="animation-delay:0.35s">
+<div class="card-img" style="background:linear-gradient(135deg, #c46e00, #e07b00)"><span class="card-icon">📊</span></div>
+<div class="card-body">
+<span class="card-source">综合市场数据</span>
+<h3><a href="https://arynews.tv/openai-and-anthropic-a-race-for-dominance" target="_blank" rel="noopener">6月12日市场动态：SpaceX今日IPO、韩国AI合作进展、甲骨文履约义务飙升363%</a></h3>
+<p class="card-desc">SpaceX今日挂牌SPCX，定价$135/股。Sam Altman因个人原因推迟韩国行（原定6/14-15），三星/Naver/Kakao合作会谈延期。韩国与新加坡/英国/澳洲/加拿大签署AI标准化MOU。甲骨文履约义务达6380亿美元同比增363%。特斯拉FSD两个月内获5个欧洲国家认证。全球AI投资持续升温。</p>
+<time>06-12 11:30</time>
+</div>
+<button class="copy-link-btn" data-url="https://arynews.tv/openai-and-anthropic-a-race-for-dominance" title="复制链接" aria-label="复制链接">🔗</button>
+</article></div></section></main>
 
 <section class="summary-section" id="section-summary">
 <div class="summary-inner">
 <h2>📋 搞钱机会 & 学习指南</h2>
 <p class="summary-sub">基于今日新闻 + 行业趋势的综合建议</p>
 <section class="summary-block">
-<h3 class="collapsible-header">🔥 搞钱机会速递 <span class="collapse-toggle">▼</span></h3>
+<h3 class="collapsible-header">🔥 今日搞钱机会速递 <span class="collapse-toggle">▼</span></h3>
 <div class="collapsible-body">
-<p class="no-data">今日暂无抓取到新的兼职机会，可关注下方固定渠道。</p>
+<ul class="opp-list">
+<li><strong>🚀 SpaceX IPO今日打新</strong> — SPCX今日正式挂牌交易！定价$135/股，估值1.77万亿美元，史上最大IPO。关注富途/老虎/长桥等渠道。<a href="https://www.nasdaq.com" target="_blank" rel="noopener">Nasdaq</a><span class="opp-src"></span></li>
+<li><strong>🏭 智能制造AI人才</strong> — 国务院智造战略+3.5万家智能工厂，AI+制造业复合人才极度稀缺。懂工业+AI的技术人员年薪可达¥500K-1M。传统制造工程师转型AI的黄金窗口。</li>
+<li><strong>🏥 AI医疗创业</strong> — 英伟达进军医疗AI，AI+药物研发、AI+诊断方向需求暴增。有医学背景+AI技能的人才极度稀缺，可做顾问/项目开发，时薪$50-100。</li>
+<li><strong>🤖 DXC/Anthropic认证工程师</strong> — DXC数万名Claude认证工程师需求！Claude API/Agent开发能力=高薪门票。建议考取Anthropic认证，成为企业AI实施顾问。</li>
+<li><strong>🎯 xAI中文AI训练师（持续热招）</strong> — 时薪$35-45（¥237-304/时），远程兼职，中文母语即可。最近最火的AI副业！<a href="https://www.thepaper.cn/newsDetail_forward_33308690" target="_blank" rel="noopener">澎湃新闻</a><span class="opp-src"></span></li>
+<li><strong>🌍 具身智能/机器人</strong> — 博世、特斯拉、英伟达全力推进，工厂场景率先落地。机器人编程、ROS、仿真环境技能将越来越值钱。长期赛道，现在入场正好。</li>
+</ul>
 </div>
 </section>
 <section class="summary-block">
-<h3 class="collapsible-header">💼 当前热门AI兼职方向 <span class="collapse-toggle">▼</span></h3>
+<h3 class="collapsible-header">💼 热门AI兼职方向（长期有效） <span class="collapse-toggle">▼</span></h3>
 <div class="collapsible-body">
 <ul class="gig-list">
-<li><strong>AI 训练师 / 数据标注员</strong>：如 xAI、OpenAI、Scale AI、DataAnnotation 等平台常年招聘，时薪 $20–50，无需编程基础，会用AI工具即可。<strong>马斯克的 xAI 频繁招募各语种 AI Trainer</strong>，关注 xAI 官网 careers 页面。</li>
+<li><strong>AI 训练师 / 数据标注员</strong>：如 xAI、OpenAI、Scale AI、DataAnnotation 等平台常年招聘，时薪 $20–50，无需编程基础。<strong>马斯克xAI频繁招募各语种AI Trainer</strong>，关注xAI官网careers页面。</li>
 <li><strong>Prompt 工程师 / AI 应用顾问</strong>：帮企业搭建 AI 工作流、写 Prompt 模板、做自动化流程，自由职业平台（Upwork / Fiverr）需求旺盛，单价 $50–500/单。</li>
 <li><strong>AI 内容创作者</strong>：用 AI 工具写文章、做视频、生成图片，接商单变现。门槛低、启动快，适合学生党。</li>
 <li><strong>AI 微调 / 模型部署自由职业</strong>：帮小企业微调开源模型（Llama、Qwen等）、部署 AI 服务，需要一定编程基础，客单价 ¥3,000–20,000。</li>
@@ -228,11 +313,11 @@ html{scroll-behavior:smooth}
 <h3 class="collapsible-header">🎯 值得投入的学习方向 <span class="collapse-toggle">▼</span></h3>
 <div class="collapsible-body">
 <ul class="learn-list">
-<li><strong>AI Agent 开发</strong>：2026 年 Agent 大爆发，学会用 LangChain / AutoGPT / CrewAI 搭 Agent 工作流，市场需求巨大。建议学 Python + Agent 框架 + API 调用。</li>
-<li><strong>开源模型微调与部署</strong>：Llama 4、Qwen 3 等开源模型越来越强，企业私有化部署需求激增。建议学 LoRA 微调、vLLM 推理、向量数据库。</li>
-<li><strong>AI + 垂直行业</strong>：AI+法律、AI+医疗、AI+金融……把 AI 能力和某个行业知识结合，是最难被替代的方向。建议深耕一个你感兴趣的行业。</li>
-<li><strong>AI 安全与对齐</strong>：随着 AI 能力增强，安全/对齐方向人才缺口巨大，薪资高、竞争小。适合喜欢研究型工作的同学。</li>
-<li><strong>多模态 AI 应用</strong>：视频生成（Sora/Kling）、语音克隆、数字人……多模态是 2026 最大风口。建议多动手做项目，积累作品集。</li>
+<li><strong>AI Agent + 企业自动化</strong>：DXC/Anthropic合作证明企业AI Agent需求爆发。学会LangChain/CrewAI/Anthropic SDK，接企业自动化项目，客单价¥5,000-50,000。</li>
+<li><strong>端侧AI开发</strong>：苹果CoreAI引擎让端侧推理提速2.47倍，端侧AI应用迎来爆发。建议学CoreML替代迁移、ONNX、移动端模型优化。</li>
+<li><strong>AI + 制造业</strong>：国家战略方向！智能工厂建设催生海量AI+工业复合岗位。建议学工业视觉、预测性维护、数字孪生。</li>
+<li><strong>具身智能与机器人</strong>：博世/特斯拉/英伟达全力布局，工厂场景率先落地。建议学ROS2、仿真环境(Isaac Sim)、机器人控制。</li>
+<li><strong>AI + 医疗</strong>：英伟达重磅布局，AI辅助诊断/药物研发是万亿赛道。有医学背景建议学医学影像AI、NLP病历分析。</li>
 </ul>
 </div>
 </section>
@@ -244,7 +329,7 @@ html{scroll-behavior:smooth}
 <li><a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> — 适合接小单，AI 头像/配音/Prompt 模板等</li>
 <li><a href="https://dataannotation.tech" target="_blank" rel="noopener">DataAnnotation</a> — 专注 AI 数据标注，时薪 $20+</li>
 <li><a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> — 远程工作聚合，常有 AI 相关岗位</li>
-<li><a href="https://zhipin.com" target="_blank" rel="noopener">BOSS直聘</a> — 搜「AI训练师」「AI标注」「远程」等关键词</li>
+<li><a href="https://zhipin.com" target="_blank" rel="noopener">BOSS直聘</a> — 搜「AI训练师」「AI标注」「远程」「智能制造」等关键词</li>
 <li><a href="https://zbj.com" target="_blank" rel="noopener">猪八戒网</a> — 国内自由职业平台，AI 相关需求增长快</li>
 <li><a href="https://xiaohongshu.com" target="_blank" rel="noopener">小红书/即刻</a> — 搜「AI兼职」「AI接单」，有很多经验分享</li>
 </ul>
@@ -255,14 +340,14 @@ html{scroll-behavior:smooth}
 
 <nav class="page-nav page-nav-bottom" id="bottom-nav">
 <a href="index.html" class="nav-btn nav-home"><span class="nav-icon">🏠</span> <span class="nav-label">首页</span></a>
-<a href="2026-06-09.html" class="nav-btn nav-prev"><span class="nav-icon">←</span> <span class="nav-label">前一天</span></a>
-<span class="nav-date">06月10日 周三</span>
-<a href="2026-06-11.html" class="nav-btn nav-next"><span class="nav-label">后一天</span> <span class="nav-icon">→</span></a>
+<a href="2026-06-11.html" class="nav-btn nav-prev"><span class="nav-icon">←</span> <span class="nav-label">前一天</span></a>
+<span class="nav-date">06月12日 周四</span>
+<span class="nav-btn nav-next disabled"><span class="nav-label">后一天</span> <span class="nav-icon">→</span></span>
 </nav>
 
 <footer class="footer">
-<p>AI 每日快报 · 自动生成于 2026-06-10 12:00 (北京时间)</p>
-<p>数据源：TechCrunch · HackerNews · MIT科技评论 · 36氪 · Bing News</p>
+<p>AI 每日快报 · 自动生成于 2026-06-12 12:00 (北京时间)</p>
+<p>数据源：新华社 · TechCrunch · Edge AI Daily · Yonhap · 腾讯新闻 · 财联社</p>
 <p style="margin-top:2px"><a href="https://river897.top" style="color:var(--accent);text-decoration:none">https://river897.top</a></p>
 <p style="margin-top:6px;opacity:.6">⚠ 投资分析仅供参考，不构成投资建议</p>
 <p style="margin-top:4px;opacity:.4;font-size:10px">键盘快捷键：<span class="kbd-hint">←</span> 前一天 <span class="kbd-hint">→</span> 后一天 <span class="kbd-hint">H</span> 首页 <span class="kbd-hint">T</span> 回到顶部</p>
@@ -274,7 +359,6 @@ html{scroll-behavior:smooth}
 <script>
 
 (function(){
-  /* ── 回到顶部按钮 ── */
   var btn = document.getElementById('scrollTopBtn');
   if(btn){
     var ticking = false;
@@ -290,7 +374,6 @@ html{scroll-behavior:smooth}
     btn.addEventListener('click', function(){window.scrollTo({top:0,behavior:'smooth'});});
   }
 
-  /* ── 复制链接 ── */
   document.addEventListener('click', function(e){
     var btn = e.target.closest('.copy-link-btn');
     if(!btn) return;
@@ -307,7 +390,6 @@ html{scroll-behavior:smooth}
     }
   });
 
-  /* ── Toast ── */
   var toastTimer;
   function showToast(msg){
     var t = document.getElementById('toast');
@@ -317,7 +399,6 @@ html{scroll-behavior:smooth}
     toastTimer = setTimeout(function(){t.classList.remove('show');},1800);
   }
 
-  /* ── 折叠区块 ── */
   document.querySelectorAll('.collapsible-header').forEach(function(h){
     h.addEventListener('click', function(){
       var body = this.nextElementSibling;
@@ -328,7 +409,6 @@ html{scroll-behavior:smooth}
     });
   });
 
-  /* ── TOC 高亮 ── */
   if('IntersectionObserver' in window){
     var sections = document.querySelectorAll('[id^="section-"]');
     var tocLinks = document.querySelectorAll('.toc a');
@@ -344,7 +424,6 @@ html{scroll-behavior:smooth}
     sections.forEach(function(s){observer.observe(s);});
   }
 
-  /* ── 键盘导航 ── */
   var isInput = function(){var t=document.activeElement;return t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable);};
   document.addEventListener('keydown',function(e){
     if(isInput()) return;
@@ -355,17 +434,6 @@ html{scroll-behavior:smooth}
     else if(k==='t'||k==='T'){window.scrollTo({top:0,behavior:'smooth'});}
   });
 
-  /* ── 首页搜索 ── */
-  var searchInput = document.getElementById('searchInput');
-  if(searchInput){
-    searchInput.addEventListener('input', function(){
-      var q = this.value.toLowerCase();
-      document.querySelectorAll('.date-list li').forEach(function(li){
-        var text = (li.textContent||'').toLowerCase();
-        li.style.display = q ? (text.indexOf(q)>=0?'':'none') : '';
-      });
-    });
-  }
 })();
 
 </script>
